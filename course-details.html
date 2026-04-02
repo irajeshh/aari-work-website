@@ -22,7 +22,9 @@
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             color: var(--text);
-            background: #fff; padding: 100px 100px 0 100px; }
+            background: #fff;
+            padding: 100px 100px 0 100px;
+        }
 
         .container {
             max-width: 1300px;
@@ -147,38 +149,61 @@
 </head>
 
 <body>
-    <header>
-        <section class="header-top">
-            <div class="container top-inner">
-                <div class="brand">
-                    <img src="images/logo.png" alt="Lotus logo" />
-                    <div class="brand-text">
-                        <div class="name">Lotus</div>
-                        <div class="subtitle">Aari Work</div>
-                    </div>
-                </div>
-                <div class="contact">
-                    <a href="tel:+919562486513">📞 9562486513</a>
-                    <a href="mailto:lotusaariwork@gmail.com">✉️ lotusaariwork@gmail.com</a>
-                </div>
-            </div>
-        </section>
-        <nav class="navbar">
-            <div class="container nav-inner">
-                <a href="index.html">Home</a>
-                <a href="our-work.html">Our Work</a>
-                <a href="our-student-work.html">Our Student Work</a>
-                <a href="contact.html">Contact Us</a>
-                <a href="about.html">About</a>
-                <a href="course-details.html">Course Details</a>
-                <a href="login.html" class="btn-login">Login /Register</a>
-            </div>
-        </nav>
-    </header>
+    <div id="navbar-placeholder"></div>
     <main class="main">
-        <h1>Course Details</h1>
-        <p>Placeholder for Course Details content.</p>
+        <section style="text-align:center; margin-bottom:32px;">
+            <h1>Types of Courses In Classic Aari Academy</h1>
+        </section>
+        <section style="border-radius:10px; padding:24px; margin-bottom:40px;">
+            <h2 style="font-size:2.5rem;">Type 1</h2>
+            <ul style="font-size:1.8rem; line-height:1.8;">
+                <li>Registration fees are only ₹500 per person.</li>
+                <li>Course duration 6 months.</li>
+                <li>We teach basic to advance level stitches (90 stitches).</li>
+                <li>Proper whatsapp group for discussion and doubts clarification.</li>
+                <li>Govt registration certificate will be provided at extra cost.</li>
+                <li>Flexible Timing.</li>
+                <li>Anytime Accessible videos.</li>
+                <li>Tailoring knowledge not required.</li>
+                <li>Limited seats only so join today.</li>
+            </ul>
+            <div style="text-align:center; margin-top:24px;"><a href="contact.html"
+                    style="display:inline-block; background:var(--purple); color:#fff; padding:14px 28px; border-radius:8px; text-decoration:none; font-size:1.4rem;">Join
+                    Now</a></div>
+        </section>
+
+        <section style="border-radius:10px; padding:24px; margin-bottom:40px;">
+            <h2 style="font-size:2.5rem;">Type 2</h2>
+            <ul style="font-size:1.8rem; line-height:1.8;">
+                <li>Registration fees + Material (₹1500/-) + shipping charges are additional.</li>
+                <li>Course duration 6 months.</li>
+                <li>We teach basic to advance level stitches (90 stitches).</li>
+                <li>Proper whatsapp group for discussion and doubts clarification.</li>
+                <li>Govt registration certificate will be provided at extra cost.</li>
+                <li>Flexible Timing.</li>
+                <li>Anytime Accessible videos.</li>
+                <li>Tailoring knowledge not required.</li>
+                <li>Limited seats only so join today.</li>
+            </ul>
+            <div style="text-align:center; margin-top:24px;"><a href="contact.html"
+                    style="display:inline-block; background:var(--purple); color:#fff; padding:14px 28px; border-radius:8px; text-decoration:none; font-size:1.4rem;">Join
+                    Now</a></div>
+        </section>
+
+
     </main>
+
+    <div id="footer-placeholder"></div>
+    <script>
+        (async () => {
+            try {
+                const nav = await fetch('navBar.html');
+                if (nav.ok) document.getElementById('navbar-placeholder').innerHTML = await nav.text();
+                const foot = await fetch('footer.html');
+                if (foot.ok) document.getElementById('footer-placeholder').innerHTML = await foot.text();
+            } catch (e) { console.error(e); }
+        })();
+    </script>
 </body>
 
 </html>
