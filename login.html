@@ -22,7 +22,9 @@
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             color: var(--text);
-            background: #fff; padding: 100px 100px 0 100px; }
+            background: #fff;
+            padding: 100px 100px 0 100px;
+        }
 
         .container {
             max-width: 1300px;
@@ -147,38 +149,42 @@
 </head>
 
 <body>
-    <header>
-        <section class="header-top">
-            <div class="container top-inner">
-                <div class="brand">
-                    <img src="images/logo.png" alt="Lotus logo" />
-                    <div class="brand-text">
-                        <div class="name">Lotus</div>
-                        <div class="subtitle">Aari Work</div>
-                    </div>
-                </div>
-                <div class="contact">
-                    <a href="tel:+919562486513">📞 9562486513</a>
-                    <a href="mailto:lotusaariwork@gmail.com">✉️ lotusaariwork@gmail.com</a>
-                </div>
-            </div>
-        </section>
-        <nav class="navbar">
-            <div class="container nav-inner">
-                <a href="index.html">Home</a>
-                <a href="our-work.html">Our Work</a>
-                <a href="our-student-work.html">Our Student Work</a>
-                <a href="contact.html">Contact Us</a>
-                <a href="about.html">About</a>
-                <a href="course-details.html">Course Details</a>
-                <a href="login.html" class="btn-login">Login /Register</a>
-            </div>
-        </nav>
-    </header>
-    <main class="main">
-        <h1>Login /Register</h1>
-        <p>Placeholder for login and registration form.</p>
+    <div id="navbar-placeholder"></div>
+    <main class="main" style="display:flex;justify-content:center;align-items:center;padding:100px 0;">
+        <div class="login-form-card"
+            style="width:min(520px,100%);background:#fff;border:2px solid #f0e4ff;border-radius:16px;padding:36px;box-shadow:0 10px 18px rgba(0,0,0,0.06);">
+            <h2 style="margin-bottom:18px;color:var(--purple);text-align:center;">Login / Register</h2>
+            <form style="display:grid;gap:14px;">
+                <label>Name</label>
+                <input type="text" placeholder="Enter your Name"
+                    style="border:2px solid var(--purple);border-radius:14px;padding:12px;font-size:1.1rem;" />
+                <label>Mobile Number</label>
+                <input type="text" placeholder="Enter your Mobile Number"
+                    style="border:2px solid var(--purple);border-radius:14px;padding:12px;font-size:1.1rem;" />
+                <label>Email</label>
+                <input type="email" placeholder="Enter your Email"
+                    style="border:2px solid var(--purple);border-radius:14px;padding:12px;font-size:1.1rem;" />
+                <label>Password</label>
+                <input type="password" placeholder="Create Password"
+                    style="border:2px solid var(--purple);border-radius:14px;padding:12px;font-size:1.1rem;" />
+                <button type="submit"
+                    style="border:none;background:var(--purple);color:#fff;padding:14px;border-radius:12px;font-size:1.6rem;cursor:pointer;">Submit</button>
+            </form>
+            <p style="margin-top:16px;text-align:center;">Already Have an Account ? <a href="#"
+                    style="color:var(--purple);text-decoration:none;">Login</a></p>
+        </div>
     </main>
-</body>
+
+    <div id="footer-placeholder"></div>
+    <script>
+        (async () => {
+            try {
+                const nav = await fetch('navBar.html');
+                if (nav.ok) document.getElementById('navbar-placeholder').innerHTML = await nav.text();
+                const foot = await fetch('footer.html');
+                if (foot.ok) document.getElementById('footer-placeholder').innerHTML = await foot.text();
+            } catch (e) { console.error(e); }
+        })();
+    </script>
 
 </html>
