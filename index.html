@@ -92,43 +92,7 @@
             text-decoration: none;
         }
 
-        .navbar {
-            background: var(--purple);
-            padding: 12px 0;
-        }
 
-        .nav-inner {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 30px;
-            flex-wrap: wrap;
-        }
-
-        .nav-inner a {
-            color: #fff;
-            text-decoration: none;
-            font-size: 1.25rem;
-            font-weight: 700;
-            padding: 10px 10px;
-            border-radius: 6px;
-        }
-
-        .nav-inner a:hover {
-            background: rgba(255, 255, 255, 0.18);
-        }
-
-        .btn-login {
-            background: #6B07AF;
-            color: var(--purple);
-            padding: 10px 20px;
-            border-radius: 24px;
-            border: 2px solid #fff;
-        }
-
-        .btn-login:hover {
-            background: #f7f1ff;
-        }
 
         .main {
             padding: 26px 20px;
@@ -339,17 +303,7 @@
             </div>
         </section>
 
-        <nav class="navbar" aria-label="Primary">
-            <div class="container nav-inner">
-                <a href="index.html">Home</a>
-                <a href="our-work.html">Our Work</a>
-                <a href="our-student-work.html">Our Student Work</a>
-                <a href="contact.html">Contact Us</a>
-                <a href="about.html">About</a>
-                <a href="course-details.html">Course Details</a>
-                <a href="login.html" class="btn-login">Login /Register</a>
-            </div>
-        </nav>
+        <div id="navbar-placeholder"></div>
     </header>
 
     <main class="main">
@@ -397,9 +351,14 @@
     <script>
         (async () => {
             try {
-                const response = await fetch('footer.html');
-                if (!response.ok) throw new Error('Footer load failed');
-                const html = await response.text();
+                const navbarResponse = await fetch('navBar.html');
+                if (navbarResponse.ok) {
+                    document.getElementById('navbar-placeholder').innerHTML = await navbarResponse.text();
+                }
+
+                const footerResponse = await fetch('footer.html');
+                if (!footerResponse.ok) throw new Error('Footer load failed');
+                const html = await footerResponse.text();
                 document.getElementById('footer-placeholder').innerHTML = html;
             } catch (error) {
                 console.error(error);
