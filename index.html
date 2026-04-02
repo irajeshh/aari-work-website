@@ -334,7 +334,7 @@
                 <img src="images/logo.png" alt="Lotus logo" height="150" width="250" />
                 <div class="contact">
                     <a href="tel:+919876543210">📞 9876543210</a>
-                    <a href="mailto:peerfathima32@gmail.com">✉️ peerfathima32@gmail.com</a>
+                    <a href="mailto:peerfathima@gmail.com">✉️ peerfathima@gmail.com</a>
                 </div>
             </div>
         </section>
@@ -393,6 +393,19 @@
         </section>
     </main>
 
+    <div id="footer-placeholder"></div>
+    <script>
+        (async () => {
+            try {
+                const response = await fetch('footer.html');
+                if (!response.ok) throw new Error('Footer load failed');
+                const html = await response.text();
+                document.getElementById('footer-placeholder').innerHTML = html;
+            } catch (error) {
+                console.error(error);
+            }
+        })();
+    </script>
 </body>
 
 </html>

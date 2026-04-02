@@ -1,0 +1,90 @@
+<footer class="site-footer">
+    <div class="footer-container">
+        <div class="footer-block footer-brand">
+            <img src="images/logo2.png" alt="Lotus Aari Work logo" class="footer-logo" />
+            <p>Start learning Aari embroidery with us now! Dive into the world of intricate stitches, patterns, and
+                designs from the comfort of your own home. Join our online class and unleash your creativity with beads,
+                sequins, and specialized techniques.</p>
+        </div>
+
+        <div class="footer-block footer-links">
+            <h3>More info</h3>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="our-work.html">Our Work</a></li>
+                <li><a href="our-student-work.html">Our Students Work</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="course-details.html">Course Details</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-block footer-contact">
+            <h3>Contact Us</h3>
+            <p>📞 9876543210</p>
+            <p>✉️ peerfathima@gmail.com</p>
+        </div>
+    </div>
+</footer>
+
+<style>
+    .site-footer {
+        background: var(--purple);
+        color: #fff;
+        padding: 40px 20px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .footer-container {
+        max-width: 1300px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 24px;
+        align-items: start;
+    }
+
+    .footer-block h3 {
+        margin-top: 0;
+        font-size: 1.8rem;
+    }
+
+    .footer-block p,
+    .footer-block li {
+        color: #f8f5ff;
+        line-height: 1.6;
+        font-size: 1.06rem;
+    }
+
+    .footer-block a {
+        color: #fff;
+        text-decoration: none;
+    }
+
+    .footer-block a:hover {
+        text-decoration: underline;
+    }
+
+    .footer-logo {
+        width: 180px;
+        max-width: 100%;
+        display: block;
+        margin-bottom: 16px;
+    }
+
+    .footer-links ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .footer-links li {
+        margin-bottom: 10px;
+    }
+
+    @media (max-width: 780px) {
+        .footer-container {
+            grid-template-columns: 1fr;
+        }
+    }
+</style>
