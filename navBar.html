@@ -1,4 +1,61 @@
 <style>
+    .header-top {
+        background: #fff;
+        border-bottom: 1px solid #eee;
+        padding: 16px 20px;
+    }
+
+    .top-inner {
+        max-width: 1300px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+        flex-wrap: wrap;
+    }
+
+    .brand {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+    }
+
+    .brand img {
+        width: 96px;
+        height: auto;
+    }
+
+    .brand-text .name {
+        font-family: 'Lucida Calligraphy', 'Brush Script MT', cursive;
+        font-size: 2rem;
+        color: var(--purple);
+        font-weight: 800;
+        margin: 0;
+    }
+
+    .brand-text .subtitle {
+        font-size: 1.2rem;
+        color: #3e0f97;
+        font-weight: 800;
+        margin: 0;
+        margin-top: -6px;
+    }
+
+    .contact {
+        display: flex;
+        align-items: center;
+        gap: 28px;
+        flex-wrap: wrap;
+        font-size: 1.1rem;
+        font-weight: 700;
+    }
+
+    .contact a {
+        color: var(--purple-dark);
+        text-decoration: none;
+    }
+
     .navbar {
         background: var(--purple);
         padding: 12px 0;
@@ -35,14 +92,25 @@
     }
 </style>
 
-<nav class="navbar" aria-label="Primary">
-    <div class="nav-inner">
-        <a href="index.html">Home</a>
-        <a href="our-work.html">Our Work</a>
-        <a href="our-student-work.html">Our Student Work</a>
-        <a href="contact.html">Contact Us</a>
-        <a href="about.html">About</a>
-        <a href="course-details.html">Course Details</a>
-        <a href="login.html" class="btn-login">Login /Register</a>
-    </div>
-</nav>
+<header>
+    <section class="header-top">
+        <div class="top-inner">
+            <img src="images/logo.png" alt="Lotus logo" height="150" width="250" />
+            <div class="contact">
+                <a href="tel:+919562486513">📞 9562486513</a>
+                <a href="mailto:lotusaariwork@gmail.com">✉️ lotusaariwork@gmail.com</a>
+            </div>
+        </div>
+    </section>
+    <nav class="navbar" aria-label="Primary">
+        <div class="nav-inner">
+            <a href="index.html">Home</a>
+            <a href="our-work.html">Our Work</a>
+            <a href="our-student-work.html">Our Student Work</a>
+            <a href="contact.html">Contact Us</a>
+            <a href="about.html">About</a>
+            <a href="course-details.html">Course Details</a>
+            <a href="login.html" class="btn-login">Login /Register</a>
+        </div>
+    </nav>
+</header>
