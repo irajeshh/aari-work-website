@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About - Lotus Aari Work</title>
+    <style>
+        :root {
+            --purple: #6B07AF;
+            --purple-dark: #4b007f;
+            --white: #fff;
+            --text: #222;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: var(--text);
+            background: #fff; padding: 100px 100px 0 100px; }
+
+        .container {
+            max-width: 1300px;
+            margin: 0 auto;
+        }
+
+        .header-top {
+            background: #fff;
+            border-bottom: 1px solid #eee;
+            padding: 16px 20px;
+        }
+
+        .top-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+
+        .brand img {
+            width: 96px;
+            height: auto;
+        }
+
+        .brand-text .name {
+            font-family: 'Lucida Calligraphy', 'Brush Script MT', cursive;
+            font-size: clamp(2rem, 5vw, 3.4rem);
+            color: var(--purple);
+            font-weight: 800;
+            margin: 0;
+        }
+
+        .brand-text .subtitle {
+            font-size: clamp(1.2rem, 2.7vw, 2rem);
+            color: #3e0f97;
+            font-weight: 800;
+            margin: 0;
+            margin-top: -6px;
+        }
+
+        .contact {
+            display: flex;
+            align-items: center;
+            gap: 28px;
+            flex-wrap: wrap;
+            font-size: 1.1rem;
+            font-weight: 700;
+        }
+
+        .contact a {
+            color: var(--purple-dark);
+            text-decoration: none;
+        }
+
+        .navbar {
+            background: var(--purple);
+            padding: 12px 0;
+        }
+
+        .nav-inner {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .nav-inner a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.25rem;
+            font-weight: 700;
+            padding: 10px 10px;
+            border-radius: 6px;
+        }
+
+        .nav-inner a:hover {
+            background: rgba(255, 255, 255, 0.18);
+        }
+
+        .btn-login {
+            background: #fff;
+            color: var(--purple);
+            padding: 10px 20px;
+            border-radius: 24px;
+            border: 2px solid #fff;
+        }
+
+        .main {
+            padding: 26px 20px;
+        }
+
+        @media (max-width: 860px) {
+            .contact {
+                justify-content: center;
+                width: 100%;
+            }
+
+            .nav-inner {
+                gap: 18px;
+            }
+        }
+
+        @media (max-width: 560px) {
+            .nav-inner {
+                gap: 10px;
+            }
+
+            .nav-inner a {
+                font-size: 1rem;
+                padding: 8px 8px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <section class="header-top">
+            <div class="container top-inner">
+                <div class="brand">
+                    <img src="images/logo.png" alt="Lotus logo" />
+                    <div class="brand-text">
+                        <div class="name">Lotus</div>
+                        <div class="subtitle">Aari Work</div>
+                    </div>
+                </div>
+                <div class="contact">
+                    <a href="tel:+919562486513">📞 9562486513</a>
+                    <a href="mailto:lotusaariwork@gmail.com">✉️ lotusaariwork@gmail.com</a>
+                </div>
+            </div>
+        </section>
+        <nav class="navbar">
+            <div class="container nav-inner">
+                <a href="index.html">Home</a>
+                <a href="our-work.html">Our Work</a>
+                <a href="our-student-work.html">Our Student Work</a>
+                <a href="contact.html">Contact Us</a>
+                <a href="about.html">About</a>
+                <a href="course-details.html">Course Details</a>
+                <a href="login.html" class="btn-login">Login /Register</a>
+            </div>
+        </nav>
+    </header>
+    <main class="main">
+        <h1>About</h1>
+        <p>Placeholder for About content.</p>
+    </main>
+</body>
+
+</html>
