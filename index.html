@@ -22,7 +22,9 @@
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             color: var(--text);
-            background: #fff; padding: 100px 100px 0 100px; }
+            background: #fff;
+            padding: 100px 100px 0 100px;
+        }
 
         .container {
             max-width: 1300px;
@@ -132,6 +134,27 @@
             padding: 26px 20px;
         }
 
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 16px;
+            margin-top: 24px;
+        }
+
+        .gallery img {
+            width: 100%;
+            height: 550px;
+            border-radius: 16px;
+            object-fit: cover;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .gallery img:hover {
+            transform: translateY(-4px) scale(1.02);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
+        }
+
         @media (max-width: 860px) {
             .contact {
                 justify-content: center;
@@ -181,7 +204,17 @@
         </nav>
     </header>
 
-    
+    <main class="main">
+        <h2>Our Aari Gallery</h2>
+        <div class="gallery">
+            <img src="images/aari1.jpg" alt="Aari design 1" />
+            <img src="images/aari2.jpg" alt="Aari design 2" />
+            <img src="images/aari3.jpg" alt="Aari design 3" />
+            <img src="images/aari4.jpg" alt="Aari design 4" />
+            <img src="images/aari5.jpg" alt="Aari design 5" />
+        </div>
+    </main>
+
 </body>
 
 </html>
