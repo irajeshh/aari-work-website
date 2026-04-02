@@ -23,30 +23,9 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             color: #121212;
             background: #fff;
-        }
+            padding: 100px 100px 0 100px; }
 
-        .navbar {
-            background: var(--purple);
-            padding: 12px 0;
-        }
 
-        .nav-inner {
-            max-width: 1300px;
-            margin: 0 auto;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 24px;
-            flex-wrap: wrap;
-        }
-
-        .nav-inner a {
-            color: #fff;
-            text-decoration: none;
-            font-weight: 700;
-            font-size: 1.1rem;
-            padding: 8px 12px;
-        }
 
         .header-section {
             background: var(--bg);
@@ -55,9 +34,8 @@
             border-bottom: 1px solid #f2d6bb;
         }
 
-        .header-section h1 {
+        .header-section h2 {
             font-size: clamp(3rem, 8vw, 5rem);
-            color: var(--purple);
             margin-bottom: 16px;
         }
 
@@ -101,21 +79,10 @@
 </head>
 
 <body>
-    <nav class="navbar">
-        <div class="nav-inner">
-            <a href="index.html">Home</a>
-            <a href="our-work.html">Our Work</a>
-            <a href="our-student-work.html">Our Student Work</a>
-            <a href="contact.html">Contact Us</a>
-            <a href="about.html">About</a>
-            <a href="course-details.html">Course Details</a>
-            <a href="login.html" style="background:#fff;color:var(--purple);border-radius:24px;padding:8px 18px;">Login
-                /Register</a>
-        </div>
-    </nav>
+    <div id="navbar-placeholder"></div>
 
     <header class="header-section">
-        <h1>Our Work</h1>
+        <h2>Our Work</h2>
     </header>
 
     <main class="content">
@@ -138,9 +105,13 @@
     <script>
         (async () => {
             try {
-                const res = await fetch('footer.html');
-                if (!res.ok) throw new Error('Footer not found');
-                document.querySelector('.footer-placeholder').innerHTML = await res.text();
+                const navbarResponse = await fetch('navBar.html');
+                if (navbarResponse.ok) {
+                    document.getElementById('navbar-placeholder').innerHTML = await navbarResponse.text();
+                }
+                const footerResponse = await fetch('footer.html');
+                if (!footerResponse.ok) throw new Error('Footer not found');
+                document.querySelector('.footer-placeholder').innerHTML = await footerResponse.text();
             } catch (error) { console.error(error); }
         })();
     </script>
