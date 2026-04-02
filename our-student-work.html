@@ -4,13 +4,13 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Our Student Work - Lotus Aari Work</title>
+    <title>Our Student - Lotus Aari Work</title>
     <style>
         :root {
             --purple: #6B07AF;
             --purple-dark: #4b007f;
-            --white: #fff;
-            --text: #222;
+            --bg: #fef0e0;
+            --text: #1f163f;
         }
 
         * {
@@ -21,164 +21,103 @@
 
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            color: var(--text);
-            background: #fff; padding: 100px 100px 0 100px; }
+            color: #121212;
+            background: #fff;
+            padding: 100px 100px 0 100px;
+        }
 
-        .container {
-            max-width: 1300px;
+
+
+        .header-section {
+            background: var(--bg);
+            text-align: center;
+            padding: 64px 16px;
+            border-bottom: 1px solid #f2d6bb;
+        }
+
+        .header-section h2 {
+            font-size: clamp(3rem, 8vw, 5rem);
+            margin-bottom: 16px;
+        }
+
+        .header-section p {
+            font-size: 1.8rem;
+            color: #1d1a37;
+            max-width: 940px;
             margin: 0 auto;
+            font-weight: bold;
         }
 
-        .header-top {
-            background: #fff;
-            border-bottom: 1px solid #eee;
-            padding: 16px 20px;
+        .content {
+            max-width: 1200px;
+            margin: 36px auto;
+            padding: 0 16px;
         }
 
-        .top-inner {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
+        .ourwork-gallery {
+            margin-top: 30px;
+        }
+
+        .ourwork-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
             gap: 16px;
-            flex-wrap: wrap;
         }
 
-        .brand {
-            display: flex;
-            align-items: center;
-            gap: 14px;
+        .ourwork-grid img {
+            width: 100%;
+            height: 280px;
+            object-fit: cover;
+            border-radius: 16px;
+            border: 3px solid var(--purple);
+            box-shadow: 0 8px 18px rgba(0, 0, 0, 0.18);
         }
 
-        .brand img {
-            width: 96px;
-            height: auto;
-        }
-
-        .brand-text .name {
-            font-family: 'Lucida Calligraphy', 'Brush Script MT', cursive;
-            font-size: clamp(2rem, 5vw, 3.4rem);
-            color: var(--purple);
-            font-weight: 800;
-            margin: 0;
-        }
-
-        .brand-text .subtitle {
-            font-size: clamp(1.2rem, 2.7vw, 2rem);
-            color: #3e0f97;
-            font-weight: 800;
-            margin: 0;
-            margin-top: -6px;
-        }
-
-        .contact {
-            display: flex;
-            align-items: center;
-            gap: 28px;
-            flex-wrap: wrap;
-            font-size: 1.1rem;
-            font-weight: 700;
-        }
-
-        .contact a {
-            color: var(--purple-dark);
-            text-decoration: none;
-        }
-
-        .navbar {
-            background: var(--purple);
-            padding: 12px 0;
-        }
-
-        .nav-inner {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 30px;
-            flex-wrap: wrap;
-        }
-
-        .nav-inner a {
-            color: #fff;
-            text-decoration: none;
-            font-size: 1.25rem;
-            font-weight: 700;
-            padding: 10px 10px;
-            border-radius: 6px;
-        }
-
-        .nav-inner a:hover {
-            background: rgba(255, 255, 255, 0.18);
-        }
-
-        .btn-login {
-            background: #fff;
-            color: var(--purple);
-            padding: 10px 20px;
-            border-radius: 24px;
-            border: 2px solid #fff;
-        }
-
-        .main {
-            padding: 26px 20px;
-        }
-
-        @media (max-width: 860px) {
-            .contact {
-                justify-content: center;
-                width: 100%;
-            }
-
-            .nav-inner {
-                gap: 18px;
-            }
-        }
-
-        @media (max-width: 560px) {
-            .nav-inner {
-                gap: 10px;
-            }
-
-            .nav-inner a {
-                font-size: 1rem;
-                padding: 8px 8px;
-            }
+        .footer-placeholder {
+            margin-top: 40px;
         }
     </style>
 </head>
 
 <body>
-    <header>
-        <section class="header-top">
-            <div class="container top-inner">
-                <div class="brand">
-                    <img src="images/logo.png" alt="Lotus logo" />
-                    <div class="brand-text">
-                        <div class="name">Lotus</div>
-                        <div class="subtitle">Aari Work</div>
-                    </div>
-                </div>
-                <div class="contact">
-                    <a href="tel:+919562486513">📞 9562486513</a>
-                    <a href="mailto:lotusaariwork@gmail.com">✉️ lotusaariwork@gmail.com</a>
-                </div>
+    <div id="navbar-placeholder"></div>
+
+    <header class="header-section">
+        <h2>Our Student</h2>
+    </header>
+
+    <main class="content">
+        <p style="font-size:2.2rem; color:#1d1a37; max-width:940px; margin:0 auto 24px; text-align:center;">
+            We take pride in offering a unique fusion of tradition and convenience. Our skilled artisans specialize in Aari
+            embroidery, bringing to life intricate patterns and designs that add a touch of elegance to your fabrics. Whether you're
+            looking for bespoke Aari works on blouses, sarees, or other attire, our team is dedicated to creating pieces that tell a
+            story.</p>
+        <section class="ourwork-gallery">
+            <div class="ourwork-grid">
+                <img src="images/our_student_work/aari1.jpeg" alt="Aari design 1" />
+                <img src="images/our_student_work/aari2.jpeg" alt="Aari design 2" />
+                <img src="images/our_student_work/aari3.jpeg" alt="Aari design 3" />
+                <img src="images/our_student_work/aari4.jpeg" alt="Aari design 4" />
+                <img src="images/our_student_work/aari5.jpeg" alt="Aari design 5" />
+                <img src="images/our_student_work/aari6.jpeg" alt="Aari design 6" />
             </div>
         </section>
-        <nav class="navbar">
-            <div class="container nav-inner">
-                <a href="index.html">Home</a>
-                <a href="our-work.html">Our Work</a>
-                <a href="our-student-work.html">Our Student Work</a>
-                <a href="contact.html">Contact Us</a>
-                <a href="about.html">About</a>
-                <a href="course-details.html">Course Details</a>
-                <a href="login.html" class="btn-login">Login /Register</a>
-            </div>
-        </nav>
-    </header>
-    <main class="main">
-        <h1>Our Student Work</h1>
-        <p>Placeholder for Our Student Work content.</p>
     </main>
+
+    <div class="footer-placeholder"></div>
+    <script>
+        (async () => {
+            try {
+                const navbarResponse = await fetch('navBar.html');
+                if (navbarResponse.ok) {
+                    document.getElementById('navbar-placeholder').innerHTML = await navbarResponse.text();
+                }
+                const footerResponse = await fetch('footer.html');
+                if (!footerResponse.ok) throw new Error('Footer not found');
+                document.querySelector('.footer-placeholder').innerHTML = await footerResponse.text();
+            } catch (error) { console.error(error); }
+        })();
+    </script>
 </body>
 
 </html>
