@@ -9,8 +9,8 @@
         :root {
             --purple: #6B07AF;
             --purple-dark: #4b007f;
-            --white: #fff;
-            --text: #222;
+            --bg: #fff;
+            --text: #1f163f;
         }
 
         * {
@@ -22,163 +22,238 @@
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             color: var(--text);
-            background: #fff; padding: 100px 100px 0 100px; }
+            background: #fff;
+            padding: 100px 100px 0 100px;
+        }
 
         .container {
             max-width: 1300px;
             margin: 0 auto;
         }
 
-        .header-top {
-            background: #fff;
-            border-bottom: 1px solid #eee;
-            padding: 16px 20px;
+        .sub-header {
+            text-align: center;
+            margin: 32px 0 24px;
         }
 
-        .top-inner {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 16px;
-            flex-wrap: wrap;
-        }
-
-        .brand {
-            display: flex;
-            align-items: center;
-            gap: 14px;
-        }
-
-        .brand img {
-            width: 96px;
-            height: auto;
-        }
-
-        .brand-text .name {
-            font-family: 'Lucida Calligraphy', 'Brush Script MT', cursive;
-            font-size: clamp(2rem, 5vw, 3.4rem);
+        .sub-header h2 {
+            font-size: clamp(2.2rem, 6vw, 3.6rem);
             color: var(--purple);
-            font-weight: 800;
-            margin: 0;
+            margin-bottom: 12px;
         }
 
-        .brand-text .subtitle {
-            font-size: clamp(1.2rem, 2.7vw, 2rem);
-            color: #3e0f97;
-            font-weight: 800;
-            margin: 0;
-            margin-top: -6px;
+        .sub-header p {
+            max-width: 780px;
+            margin: 0 auto;
+            font-size: 1.2rem;
+            color: #333;
         }
 
-        .contact {
-            display: flex;
-            align-items: center;
-            gap: 28px;
-            flex-wrap: wrap;
-            font-size: 1.1rem;
-            font-weight: 700;
-        }
-
-        .contact a {
-            color: var(--purple-dark);
-            text-decoration: none;
-        }
-
-        .navbar {
-            background: var(--purple);
-            padding: 12px 0;
-        }
-
-        .nav-inner {
-            display: flex;
-            align-items: center;
-            justify-content: center;
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 30px;
-            flex-wrap: wrap;
+            margin-top: 30px;
         }
 
-        .nav-inner a {
-            color: #fff;
-            text-decoration: none;
-            font-size: 1.25rem;
-            font-weight: 700;
-            padding: 10px 10px;
-            border-radius: 6px;
-        }
-
-        .nav-inner a:hover {
-            background: rgba(255, 255, 255, 0.18);
-        }
-
-        .btn-login {
+        .contact-card {
             background: #fff;
-            color: var(--purple);
-            padding: 10px 20px;
-            border-radius: 24px;
-            border: 2px solid #fff;
+            border: 2px solid #f0e4ff;
+            border-radius: 16px;
+            padding: 28px 20px;
+            text-align: center;
+            box-shadow: 0 10px 18px rgba(0, 0, 0, 0.06);
+            margin-bottom: 48px;
         }
 
-        .main {
-            padding: 26px 20px;
+        .contact-card h3 {
+            font-size: 2rem;
+            color: #1f163f;
+            margin-bottom: 10px;
         }
 
-        @media (max-width: 860px) {
-            .contact {
-                justify-content: center;
-                width: 100%;
+        .contact-card .icon {
+            font-size: 2.5rem;
+            margin: 12px 0;
+            display: inline-block;
+        }
+
+        .contact-card p {
+            margin: 12px 0 0;
+            font-size: 1.5rem;
+        }
+
+        .content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .contact-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 26px;
+            margin-top: 24px;
+            align-items: start;
+        }
+
+        .contact-form-card,
+        .contact-image-card {
+            background: #fff;
+            border: 2px solid #f0e4ff;
+            border-radius: 16px;
+            box-shadow: 0 10px 18px rgba(0, 0, 0, 0.06);
+            padding: 24px;
+        }
+
+        .contact-form-card h3 {
+            font-size: 2rem;
+            color: #1f163f;
+            margin-bottom: 18px;
+        }
+
+        .contact-form-card form {
+            display: grid;
+            gap: 12px;
+        }
+
+        .contact-form-card label {
+            font-weight: 700;
+            color: var(--text);
+            margin-bottom: 6px;
+            display: inline-block;
+        }
+
+        .contact-form-card input,
+        .contact-form-card textarea {
+            width: 100%;
+            border: 2px solid var(--purple);
+            border-radius: 14px;
+            padding: 12px;
+            font-size: 1.05rem;
+            outline: none;
+            transition: border-color .2s ease;
+        }
+
+        .contact-form-card input:focus,
+        .contact-form-card textarea:focus {
+            border-color: var(--purple-dark);
+        }
+
+        .contact-form-card textarea {
+            height: 160px;
+            resize: vertical;
+        }
+
+        .contact-form-card button {
+            margin-top: 10px;
+            border: none;
+            background: var(--purple);
+            color: #fff;
+            border-radius: 10px;
+            padding: 12px 20px;
+            font-size: 1.2rem;
+            cursor: pointer;
+        }
+
+        .contact-form-card button:hover {
+            background: var(--purple-dark);
+        }
+
+        .contact-image-card img {
+            width: 100%;
+            height: auto;
+            border-radius: 16px;
+            display: block;
+        }
+
+        @media (max-width: 900px) {
+            body {
+                padding: 60px 30px 0 30px;
             }
 
-            .nav-inner {
+            .contact-row {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .contact-card {
+                padding: 20px;
+            }
+
+            .contact-row {
                 gap: 18px;
             }
-        }
 
-        @media (max-width: 560px) {
-            .nav-inner {
-                gap: 10px;
-            }
-
-            .nav-inner a {
-                font-size: 1rem;
-                padding: 8px 8px;
+            .contact-form-card,
+            .contact-image-card {
+                padding: 16px;
             }
         }
     </style>
 </head>
 
 <body>
-    <header>
-        <section class="header-top">
-            <div class="container top-inner">
-                <div class="brand">
-                    <img src="images/logo.png" alt="Lotus logo" />
-                    <div class="brand-text">
-                        <div class="name">Lotus</div>
-                        <div class="subtitle">Aari Work</div>
-                    </div>
-                </div>
-                <div class="contact">
-                    <a href="tel:+919562486513">📞 9562486513</a>
-                    <a href="mailto:lotusaariwork@gmail.com">✉️ lotusaariwork@gmail.com</a>
-                </div>
+    <div id="navbar-placeholder"></div>
+
+    <main class="content">
+        <section class="sub-header">
+            <h2>Contact Us</h2>
+            <p>Reach out to Lotus Aari Work for questions, course registrations, or custom design inquiries. We're here
+                to help you begin your Aari embroidery journey with confidence.</p>
+        </section>
+
+        <section class="contact-grid">
+            <article class="contact-card">
+                <h3>Email Us</h3>
+                <div class="icon">✉️</div>
+                <p>lotusaariwork@gmail.com</p>
+            </article>
+            <article class="contact-card">
+                <h3>Phone Number</h3>
+                <div class="icon">📞</div>
+                <p>9562486513</p>
+            </article>
+        </section>
+
+        <section class="contact-row">
+            <div class="contact-form-card">
+                <h3>Contact Form</h3>
+                <form>
+                    <label>Name</label>
+                    <input type="text" placeholder="Enter your Name" />
+                    <label>Mobile Number</label>
+                    <input type="text" placeholder="Enter your Mobile Number" />
+                    <label>Email</label>
+                    <input type="email" placeholder="Enter your Email" />
+                    <label>Message</label>
+                    <textarea placeholder="Send Message"></textarea>
+                    <button type="submit">Send Message</button>
+                </form>
+            </div>
+            <div class="contact-image-card">
+                <img src="images/contact.avif" alt="Contact illustration" />
             </div>
         </section>
-        <nav class="navbar">
-            <div class="container nav-inner">
-                <a href="index.html">Home</a>
-                <a href="our-work.html">Our Work</a>
-                <a href="our-student-work.html">Our Student Work</a>
-                <a href="contact.html">Contact Us</a>
-                <a href="about.html">About</a>
-                <a href="course-details.html">Course Details</a>
-                <a href="login.html" class="btn-login">Login /Register</a>
-            </div>
-        </nav>
-    </header>
-    <main class="main">
-        <h1>Contact Us</h1>
-        <p>Placeholder for Contact Us content.</p>
     </main>
+
+    <div id="footer-placeholder"></div>
+    <script>
+        (async () => {
+            try {
+                const navbarResponse = await fetch('navBar.html');
+                if (navbarResponse.ok) {
+                    document.getElementById('navbar-placeholder').innerHTML = await navbarResponse.text();
+                }
+                const footerResponse = await fetch('footer.html');
+                if (footerResponse.ok) {
+                    document.getElementById('footer-placeholder').innerHTML = await footerResponse.text();
+                }
+            } catch (error) {
+                console.error(error);
+            }
+        })();
+    </script>
 </body>
 
 </html>
