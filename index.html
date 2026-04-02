@@ -134,6 +134,84 @@
             padding: 26px 20px;
         }
 
+        .welcome-section {
+            margin: 24px 0;
+            background: #faf6ff;
+            border: 1px solid #ead4ff;
+            border-radius: 18px;
+            padding: 24px;
+        }
+
+        .welcome-stack {
+            display: flex;
+            gap: 24px;
+            align-items: flex-start;
+            flex-wrap: wrap;
+        }
+
+        .welcome-text {
+            min-width: 280px;
+            max-width: 600px;
+        }
+
+        .welcome-text h1 {
+            margin-bottom: 14px;
+            color: var(--purple);
+        }
+
+        .welcome-text p {
+            font-size: 1.2rem;
+            line-height: 1.5;
+            margin-bottom: 0;
+        }
+
+        .welcome-stack-images {
+            position: relative;
+            width: min(380px, 100%);
+            height: 340px;
+        }
+
+        .welcome-stack-images img {
+            width: calc(100% - 14px);
+            height: 200px;
+            object-fit: cover;
+            border-radius: 16px;
+            border: 4px solid #fff;
+            box-shadow: 0 10px 24px rgba(0, 0, 0, 0.2);
+            position: absolute;
+        }
+
+        .welcome-stack-images img:nth-child(1) {
+            top: 0;
+            left: 0;
+            z-index: 2;
+        }
+
+        .welcome-stack-images img:nth-child(2) {
+            top: 80px;
+            left: 44px;
+            z-index: 1;
+            width: calc(100% - 28px);
+        }
+
+        @media (max-width: 900px) {
+            .welcome-stack {
+                flex-direction: column;
+            }
+
+            .welcome-stack-images {
+                height: auto;
+            }
+
+            .welcome-stack-images img {
+                position: relative;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 240px;
+            }
+        }
+
         .gallery {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -212,6 +290,22 @@
             <img src="images/aari3.jpg" alt="Aari design 3" />
             <img src="images/aari4.jpg" alt="Aari design 4" />
             <img src="images/aari5.jpg" alt="Aari design 5" />
+        </div>
+
+        <section class="welcome-section">
+            <div class="welcome-stack">
+                <div class="welcome-text">
+                    <h1>Welcome To Lotus Aari Work</h1>
+                    <p>Welcome to Lotus Aari Work, a leading company in the field of Aari work with over 5 years of
+                        experience. Our mission is to provide professional Aari embroidery training to students
+                        worldwide.</p>
+                </div>
+                <div class="welcome-stack-images">
+                    <img src="images/aari7.jpeg" alt="Aari design 7" />
+                    <img src="images/aari8.jpeg" alt="Aari design 8" />
+                </div>
+            </div>
+        </section>
         </div>
     </main>
 
