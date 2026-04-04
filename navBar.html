@@ -66,6 +66,14 @@
         margin: 0 auto;
         display: flex;
         align-items: center;
+        justify-content: space-between;
+        gap: 24px;
+        flex-wrap: wrap;
+    }
+
+    .nav-links {
+        display: flex;
+        align-items: center;
         justify-content: center;
         gap: 24px;
         flex-wrap: wrap;
@@ -79,6 +87,44 @@
         padding: 8px 12px;
     }
 
+    .menu-toggle {
+        display: none;
+    }
+
+    .mobile-bar {
+        display: none;
+        width: 100%;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+    }
+
+    .mobile-menu-toggle {
+        display: none;
+        width: 44px;
+        height: 44px;
+        border: 2px solid #fff;
+        border-radius: 14px;
+        background: rgba(255, 255, 255, 0.12);
+        cursor: pointer;
+        padding: 8px;
+        align-items: center;
+        justify-content: center;
+        box-sizing: border-box;
+        transition: background 0.2s ease;
+    }
+
+    .mobile-menu-toggle:hover {
+        background: rgba(255, 255, 255, 0.2);
+    }
+
+    .mobile-menu-toggle svg {
+        width: 24px;
+        height: 24px;
+        display: block;
+        fill: #fff;
+    }
+
     .btn-login {
         background: var(--purple);
         color: #fff;
@@ -89,6 +135,70 @@
 
     .btn-login:hover {
         background: #f7f1ff;
+        color: var(--purple);
+    }
+
+    .desktop-login {
+        display: inline-flex;
+    }
+
+    @media (max-width: 900px) {
+        .top-inner {
+            align-items: flex-start;
+            justify-content: space-between;
+            gap: 14px;
+        }
+
+        .contact {
+            width: 100%;
+            justify-content: flex-start;
+            gap: 18px;
+        }
+
+        .contact a {
+            font-size: 1rem;
+        }
+
+        .navbar {
+            padding: 16px 12px;
+        }
+
+        .nav-inner {
+            flex-direction: column;
+            align-items: stretch;
+            justify-content: stretch;
+        }
+
+        .desktop-login {
+            display: none;
+        }
+
+        .mobile-bar {
+            display: flex;
+        }
+
+        .mobile-menu-toggle {
+            display: inline-flex;
+        }
+
+        .nav-links {
+            display: none;
+            flex-direction: column;
+            gap: 12px;
+            width: 100%;
+            padding-top: 10px;
+        }
+
+        .nav-links a {
+            width: 100%;
+            text-align: center;
+            padding: 14px 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.15);
+        }
+
+        .menu-toggle:checked+.mobile-bar+.nav-links {
+            display: flex;
+        }
     }
 </style>
 
@@ -104,13 +214,24 @@
     </section>
     <nav class="navbar" aria-label="Primary">
         <div class="nav-inner">
-            <a href="index.html">Home</a>
-            <a href="our-work.html">Our Work</a>
-            <a href="our-student-work.html">Our Student Work</a>
-            <a href="contact.html">Contact Us</a>
-            <a href="about.html">About</a>
-            <a href="course-details.html">Course Details</a>
-            <a href="login.html" class="btn-login">Login /Register</a>
+            <a href="login.html" class="btn-login desktop-login">Login /Register</a>
+            <input type="checkbox" id="menu-toggle" class="menu-toggle" aria-hidden="true" />
+            <div class="mobile-bar">
+                <a href="login.html" class="btn-login">Login /Register</a>
+                <label for="menu-toggle" class="mobile-menu-toggle" aria-label="Toggle navigation">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M4 18h16v-2H4v2zm0-5h16v-2H4v2zm0-5v2h16V8H4z" />
+                    </svg>
+                </label>
+            </div>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="our-work.html">Our Work</a>
+                <a href="our-student-work.html">Our Student Work</a>
+                <a href="contact.html">Contact Us</a>
+                <a href="about.html">About</a>
+                <a href="course-details.html">Course Details</a>
+            </div>
         </div>
     </nav>
 </header>
